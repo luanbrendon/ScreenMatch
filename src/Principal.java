@@ -9,21 +9,15 @@ import java.util.ArrayList;
 public class Principal {
 
     public static void main(String[] args) {
-        Filme favorito = new Filme();
-        favorito.setNome("The Matrix");
-        favorito.setAnoDeLancamento(1999);
+        Filme favorito = new Filme("The Matrix", 1999);
         favorito.setDuracaoEmMinutos(135);
         favorito.setIncluidoNoPlano(true);
 
-        Filme outro = new Filme();
-        outro.setNome("John Wick");
-        outro.setAnoDeLancamento(2014);
+        Filme outro = new Filme("dogs", 2014);
         outro.setDuracaoEmMinutos(101);
         outro.setIncluidoNoPlano(true);
 
-        Serie serie = new Serie();
-        serie.setNome("La Casa de Papel");
-        serie.setAnoDeLancamento(2017);
+        Serie serie = new Serie("La Casa de Papel",2017);
         serie.setIncluidoNoPlano(true);
         serie.setAtiva(true);
         serie.setTemporadas(5);
@@ -46,10 +40,8 @@ public class Principal {
         episodio.setTotalVisualicacoes(300);
         recomendacao.filtra(episodio);
 
-        var filmeDoLuan = new Filme();
+        var filmeDoLuan = new Filme("Harry Potter", 2003);
         filmeDoLuan.setDuracaoEmMinutos(200);
-        filmeDoLuan.setNome("Harry Potter");
-        filmeDoLuan.setAnoDeLancamento(2023);
         filmeDoLuan.avalia(10);
 
         ArrayList<Filme> lisaDeFilmes = new ArrayList<>();
@@ -62,6 +54,7 @@ public class Principal {
         System.out.println(lisaDeFilmes);
         System.out.println("toString do filme " + lisaDeFilmes.get(0).toString());
 
+        Object objeto = filmeDoLuan;
     }
 
 }
