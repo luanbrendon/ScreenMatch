@@ -2,7 +2,7 @@ package br.com.luan.screenmatch.modelos;
 
 import br.com.luan.screenmatch.calculos.Classificavel;
 
-public class Titulo implements Classificavel {
+public class Titulo implements Comparable<Titulo> {
     private String nome;
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
@@ -69,8 +69,8 @@ public class Titulo implements Classificavel {
     }
 
     @Override
-    public int getClassificacao() {
-        return (int) obtemMedia() / 2;
+    public int compareTo(Titulo outroTitulo) {
+        return this.getNome().compareTo(outroTitulo.getNome());
     }
 }
 

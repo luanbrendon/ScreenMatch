@@ -1,3 +1,5 @@
+package principal;
+
 import br.com.luan.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.luan.screenmatch.calculos.Recomendacao;
 import br.com.luan.screenmatch.modelos.Episodio;
